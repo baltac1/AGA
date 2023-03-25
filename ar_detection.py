@@ -46,7 +46,7 @@ def main():
   while(True):
     marker_dict = {} # a marker dict to keep track of the currently visible AR tags and their positions
     positions = [] # position list to keep track of the center positions of the tags (because marker dict is being reset each iteration)
-    ret, frame = cap.read()  
+    ret, frame = cap.read()  # get the frame
     
     (corners, ids, rejected) = cv2.aruco.detectMarkers(
       frame, this_aruco_dictionary, parameters=this_aruco_parameters)
